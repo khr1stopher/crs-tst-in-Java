@@ -1,19 +1,13 @@
 package com.vercell.khristopherpineda.util;
 
-//import static org.junit.jupiter.api.Assertions.*;
+import org.junit.Assert;
+import org.junit.Test;
 
-class StringUtilTest {
-    public static void main(String[] args) {
+public class StringUtilTest {
 
-        assertEquals(StringUtil.repeat("something", 3), "somethingsomethingsomething");
-
-        assertEquals(StringUtil.repeat("something", 1), "something");
-
-    }
-
-    private static void assertEquals(String actual, String expected) {
-        if (!actual.equals(expected)) {
-            throw new RuntimeException(actual + " in not equal to expected " + expected);
-        }
+    @Test
+    public void testRepeat() {
+        Assert.assertEquals("somethingsomethingsomething", StringUtil.repeat("something", 3));
+        Assert.assertEquals("something", StringUtil.repeat("something", 1));
     }
 }
